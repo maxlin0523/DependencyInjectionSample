@@ -18,16 +18,9 @@ namespace TestProject
             container.RegisterType<ICompressor, ZipCompressor>();
 
             // 解析型別取得元件的執行個體，
-            ICompressor enity = container.Resolve<ICompressor>();
-            // 以上的code 一般放在程式一啟動的片段
-            // .NET Framework為 APP_START
-            // .NET Core為 Startup
-
-
-            // 建立元件。
-            var nba = new NbaController(enity);
-            var cba = new CbaController(enity);
-            var sbl = new SblController(enity);
+            var nba = container.Resolve<NbaController>();
+            var cba = container.Resolve<CbaController>();
+            var sbl = container.Resolve<SblController>();
 
             // 呼叫元件的方法。
             nba.Save();
