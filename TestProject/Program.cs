@@ -9,15 +9,20 @@ namespace TestProject
     {
         static void Main(string[] args)
         {
-            // unity是loc容器的一個框架
+            // 此範例用Unity。
+            // Unity套件是IoC容器的一個框架
 
-            // 建立loc容器(unity)。
+            // 建立IoC容器。
             IUnityContainer container = new UnityContainer();
 
-            // 向loc容器(unity)註冊型別。
+            // 向IoC容器註冊型別。
             container.RegisterType<ICompressor, ZipCompressor>();
 
-            // 解析型別取得元件的執行個體，
+            // 若想改Rar壓縮，註冊型別請改成以下:
+            // container.RegisterType<ICompressor, RarCompressor>();
+
+
+            // 解析型別取得元件的執行個體。
             var nba = container.Resolve<NbaController>();
             var cba = container.Resolve<CbaController>();
             var sbl = container.Resolve<SblController>();

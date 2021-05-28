@@ -21,7 +21,7 @@ namespace TestProject.Models
 
         public void Save()
         {
-            Console.WriteLine($"Nba is use {_compressor.DoCompress()}");
+            Console.WriteLine($"NBA is using {_compressor.DoCompress()}");
         }
     }
 }

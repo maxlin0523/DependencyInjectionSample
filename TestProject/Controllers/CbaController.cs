@@ -21,7 +21,7 @@ namespace TestProject.Models
 
         public void Save()
         {
-            Console.WriteLine($"Cba is use {_compressor.DoCompress()}");
+            Console.WriteLine($"CBA is using {_compressor.DoCompress()}");
         }
     }
 }

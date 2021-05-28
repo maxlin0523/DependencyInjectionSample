@@ -21,7 +21,7 @@ namespace TestProject.Models
 
         public void Save()
         {
-            Console.WriteLine($"Sbl is use {_compressor.DoCompress()}");
+            Console.WriteLine($"SBL is using {_compressor.DoCompress()}");
         }
     }
 }
