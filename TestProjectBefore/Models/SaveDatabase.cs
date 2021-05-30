@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TestProject.Interfaces;
 
-namespace TestProject.Models
+namespace TestProjectBefore.Models
 {
     /// <summary>
-    /// Zip壓縮
+    /// 儲存到資料庫
     /// </summary>
-    public class ZipCompressor : ICompressor
+    public class SaveDatabase
     {
-        public string DoCompress()
+        public string DoSave()
         {
             // todo
-            return "ZipCompress done";
+            return "saving in the database.";
         }
     }
 }

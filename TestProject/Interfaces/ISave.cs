@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace TestProject.Interfaces
 {
     /// <summary>
-    /// 壓縮介面
+    /// 儲存功能介面
     /// </summary>
-    public interface ICompressor
+    public interface ISave
     {
-        public string DoCompress();
+       string DoSave();
     }
 }

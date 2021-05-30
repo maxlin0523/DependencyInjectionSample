@@ -15,22 +15,22 @@ namespace TestProject
             // 建立IoC容器。
             IUnityContainer container = new UnityContainer();
 
-            // 向IoC容器註冊型別。
-            container.RegisterType<ICompressor, ZipCompressor>();
+            // 向IoC容器註冊型別也就是依賴注入(Denpendency Injection)。
+            container.RegisterType<ISave, SaveExcel>();
 
-            // 若想改Rar壓縮，註冊型別請改成以下:
-            // container.RegisterType<ICompressor, RarCompressor>();
+            // 若想以資料庫存檔，請改成以下注入:
+            // container.RegisterType<ISave, SaveDatabase>();
 
 
-            // 解析型別取得元件的執行個體。
+
+            // 解析型別取得元件的執行個體，
+            // 並由容器"主動"提供依賴物件給Nba類別使用，不需再宣告建構式！
             var nba = container.Resolve<NbaController>();
-            var cba = container.Resolve<CbaController>();
-            var sbl = container.Resolve<SblController>();
 
-            // 呼叫元件的方法。
-            nba.Save();
-            cba.Save();
-            sbl.Save();
+            // 呼叫方法。
+            nba.SaveRecord();
+
+            // 輸出結果就會根據你註冊的儲存類別而改變
 
             Console.ReadKey();
         }

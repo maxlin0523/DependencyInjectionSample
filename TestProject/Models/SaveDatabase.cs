@@ -8,14 +8,14 @@ using TestProject.Interfaces;
 namespace TestProject.Models
 {
     /// <summary>
-    /// RAR壓縮
+    /// 儲存到資料庫
     /// </summary>
-    public class RarCompressor : ICompressor
+    public class SaveDatabase : ISave
     {
-        public string DoCompress()
+        public string DoSave()
         {
             // todo
-            return "RarCompress done";
+            return "saving in the database.";
         }
     }
 }
